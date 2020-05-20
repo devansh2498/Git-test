@@ -31,7 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul> 
                 <div class="navbar-text">
-                    <a role="button" class="" data-toggle="modal" data-target="#loginmodal">
+                    <a role="button" id="loginButton">
                         <i class="fa fa-sign-in"></i> Login
                     </a>
                 </div> 
@@ -46,7 +46,7 @@
           <div class="modal-content ">
             <div class="modal-header">
               <h4 class="modal-title">Login</h5>
-              <button type="button" class="close" data-dismiss="modal">
+              <button type="button" class="close modal-close" data-dismiss="modal">
                 <span>&times;</span>
               </button>
             </div>
@@ -82,9 +82,9 @@
       <div class="modal fade" id="reservemodal" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
-            <div class="modal-header bg-warning">
+            <div class="modal-header">
               <h3 class="modal-title ">Reserve a Table</h3>
-              <button type="button" class="close" data-dismiss="modal">
+              <button type="button" class="close modal-close" data-dismiss="modal">
                 <span>&times;</span>
               </button>
             </div>
@@ -172,8 +172,7 @@
                     <img class="img-fluid" src="img/logo.png" alt="logo">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-block btn-warning" data-toggle="modal"
-                    data-target="#reservemodal">Reserve Table</a>
+                    <a class="btn btn-block btn-warning" id="reserveButton">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -349,28 +348,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#mycarousel").carousel( { interval:500} );
-            $("#carouselButton").click(function(){
-                if($("#carouselButton").children("span").hasClass("fa-pause"))
-                {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass("fa-pause");
-                    $("#carouselButton").children("span").addClass("fa-play");
-                }
-                else if($("#carouselButton").children("span").hasClass("fa-play"))
-                {
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass("fa-play");
-                    $("#carouselButton").children("span").addClass("fa-pause");
-                }
-                    
-            });
-           
-        });
-    </script>
-
+    <script src="js/script.js"></script> 
 </body>
 
 </html>
